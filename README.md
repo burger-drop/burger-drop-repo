@@ -504,6 +504,9 @@ https://chb2005.tistory.com/201 (프로젝트에서의 Time Zone 변경)을 참�
 
 ![image](https://github.com/user-attachments/assets/74f883c3-b248-4e06-9b6a-41f645d75f2c)
 
+![image](https://github.com/user-attachments/assets/4c15da1b-c06c-4154-8dac-1ccaaeccc6d0)
+
+
 <br>
 
 
