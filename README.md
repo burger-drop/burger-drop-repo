@@ -83,7 +83,43 @@
 2. AWS S3를 활용한 이미지 파일 업로드 및 저장
 3. SMTP를 활용한 이메일 인증 기능
 4. WebSocket, stomp, Redis 사용한 채팅 기능
-5. AWS EC2를 사용한 배포
+5. AWS EC2를 사용한 배포 및 HTTPS 보안 적용<div style="display: flex; justify-content: center;">
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Github-181717?style=flat&logo=github&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Intellijidea-000000?style=flat&logo=intellijidea&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=flat&logo=postman&logoColor=white" style="margin-right: 10px;">
+</div>
+
+<div style="display: flex; justify-content: center;">
+
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=Redis&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=Bootstrap&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Slack-4A154B?style=flat&logo=Slack&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Thymeleaf-005F0F?style=flat&logo=Thymeleaf&logoColor=white" style="margin-right: 10px;">
+</div>
+
+<div style="display: flex; justify-content: center;">
+  <img src="https://img.shields.io/badge/WebSocket-F56640?style=flat&logo=WebSocket&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/Amazon S3-569A31?style=flat&logo=Amazon S3&logoColor=white" style="margin-right: 10px;">
+  <img src="https://img.shields.io/badge/ApachetTomcat-F8DC75?style=flat&logo=apachetomcat&logoColor=white" style="margin-right: 10px;"/>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=Docker&logoColor=white" style="margin-right: 10px;"/>
+</div>
+
+<br>
+<h2>⚙️서비스 아키텍처</h2>
+<p align="center">
+  <img src="https://github.com/burger-drop/burger-drop-repo/assets/94231335/6d9e5d0d-3196-4ba6-8464-83a8caf078fa" style="margin-right: 10px;">
+</p>
+
+
+<br>
+
+# ✨주요 기능
+1. Redis를 활용한 Refresh token 운용 - JWT의 취약점 보완 및 로그인 상태 유지
+2. AWS S3를 활용한 이미지 파일 업로드 및 저장
+3. SMTP를 활용한 이메일 인증 기능
+4. WebSocket, stomp, Redis 사용한 채팅 기능
+5. AWS EC2를 사용한 배포 및 HTTPS 보안 적용
 6. Redis와 Interceptor를 활용한 방문자 정보 저장 - 총 방문자 수와 주된 방문 경로 파악
 7. Swagger 연동 - API 명세서 작성 시간 단축 및 API 테스트 보조
 8. 위치기반 API를 활용한 거리계산, 배달예정시간 계산
@@ -112,8 +148,7 @@
 - 카테고리 별로 상품을 확인할 수 있다. [햄버거, 음료, 사이드]
 
 `리뷰`
-- 유저는 리뷰 생성, 조회, 수정, 삭제가 가능하다
-- 리뷰를 쓸 때 별점을 부여할 수 있다.
+- 유저는 리뷰 생성, 조회, 삭제가 가능하다
 - 음식 이미지를 첨부할 수 있다.
 
 `장바구니`
@@ -158,7 +193,7 @@
 | 김예성 (리더) | Oauth2 카카오톡 소셜로그인<br>스프링 시큐리티 필터로 로그인 구현 (JWT 토큰 인증/인가)<br>Redis를 활용한 refreshToken 저장 accessToken 발급<br>비밀번호 암호화 BCryptPasswordEncoder<br>S3 활용한 이미지 업로드<br>마이페이지(프로필 조회 및 수정, 리뷰 내역 조회, 주문 내역 조회)<br>SMTP 이메일 인증<br> 담당한 백엔드의 프론트엔드 페이지 작성 및 연결 |
 | 서지인 (부리더) | WebSocket, STOMP, redis를 사용한 실시간 채팅 기능<br> SSE 실시간 알림 기능<br> 담당한 백엔드의 프론트엔드 페이지 작성 및 연결 |
 | 신성민 | 상품, 옵션, 장바구니, 주문 CRUD 작성 및 엔티티 연관관계 설정<br> 위치기반 API를 사용하여 거리계산 및 배달소요시간 계산<br> 스케쥴러를 사용하여 주문 목록 관리 및 수령 완료 처리<br> 상품목록, 방문자 IP주소, 유저목록 키워드 검색 기능<br> 백오피스(총 매출액, 모든 주문 목록, 총 유저 목록, 방문자 목록, 조회수 확인)<br> Redis, Interceptor 를 사용한 방문자 정보 저장<br> Swagger 연동 (JWT 인증 버튼 포함)<br>상품에 평점 기능 추가<br> 상품 목록 조회, 상품 단건 조회에 Redis Cache 적용<br> 담당한 백엔드의 프론트엔드 페이지 작성 및 연결 |
-| 박진성 | 유저 평판 관리(리뷰 조회, 작성, 수정, 삭제, 좋아요, 좋아요 취소, 평점)<br> AWS EC2를 활용한 배포<br> Git Actions를 활용한 CI/CD 구축 |
+| 박진성 | 유저 평판 관리(리뷰 조회, 작성, 삭제)<br> AWS EC2를 활용한 배포<br>AWS ACM, Route53, EC2, Elastic Load Balancer(ELB), 가비아 등을 이용한 Https 보안 적용 및 도메인 연결 <br>Ubuntu 환경에서 Redis 백그라운드 실행 & 외부 접속 허용 및 보안 환경 구축<br>Redis 백업 적용(RDB, AOF 방식 동시 사용)<br>Git Actions를 활용한 CI/CD 구축 |
 
 <br>
 
